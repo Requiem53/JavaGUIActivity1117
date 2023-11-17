@@ -13,22 +13,25 @@ public LeapYear() {
     btnCheckYear.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            int year = Integer.parseInt(tfYear.getText());
+            try{
+                int year = Integer.parseInt(tfYear.getText());
 
-            if(year % 4 == 0){
-                if(year % 100 == 0){
-                    if(year % 400 == 0){
-                        JOptionPane.showMessageDialog(panel1, "Leap year");
+                if(year % 4 == 0){
+                    if(year % 100 == 0){
+                        if(year % 400 == 0){
+                            JOptionPane.showMessageDialog(panel1, "Leap year");
+                        }else{
+                            JOptionPane.showMessageDialog(panel1, "Not a leap year");
+                        }
                     }else{
-                        JOptionPane.showMessageDialog(panel1, "Not a leap year");
+                        JOptionPane.showMessageDialog(panel1, "Leap year");
                     }
                 }else{
-                    JOptionPane.showMessageDialog(panel1, "Leap year");
+                    JOptionPane.showMessageDialog(panel1, "Not a leap year");
                 }
-            }else{
-                JOptionPane.showMessageDialog(panel1, "Not a leap year");
+            } catch (Exception ex){
+                JOptionPane.showMessageDialog(panel1, ex.getMessage());
             }
-
         }
     });
 }
@@ -38,7 +41,7 @@ public LeapYear() {
         JButton btn = new JButton("HIEFS");
         app.setSize(400, 400);
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setTitle("Hello World");
+        app.setTitle("Leap Year Checker");
         app.setVisible(true);
     }
 }

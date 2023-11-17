@@ -50,7 +50,7 @@ public class SimpleCalculator extends JFrame{
         JButton btn = new JButton("HIEFS");
         app.setSize(800, 200);
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setTitle("Hello World");
+        app.setTitle("Simple Calculator");
         app.setVisible(true);
     }
 }

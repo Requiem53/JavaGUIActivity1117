@@ -24,7 +24,7 @@ public class FoodOrderingPackage extends JFrame{
         JButton btn = new JButton("HIEFS");
         app.setSize(400, 600);
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setTitle("Order Food");
+        app.setTitle("Food Ordering System");
         app.setVisible(true);
     }
 
