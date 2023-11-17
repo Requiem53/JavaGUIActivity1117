@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.lang.Math;
 
 public class SimpleCalculator extends JFrame{
+
     private JTextField tfNumber1;
     private JComboBox cbOperations;
     private JTextField tfNumber2;
