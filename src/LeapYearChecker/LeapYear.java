@@ -15,7 +15,9 @@ public LeapYear() {
         public void actionPerformed(ActionEvent e) {
             try{
                 int year = Integer.parseInt(tfYear.getText());
-
+                if(year < 0){
+                    throw new IllegalArgumentException("Invalid Year. Must be a non-negative");
+                }
                 if(year % 4 == 0){
                     if(year % 100 == 0){
                         if(year % 400 == 0){
